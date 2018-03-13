@@ -1,0 +1,19 @@
+* mount [-fnrsvw] [-t vfstype] [-o options] device dir
+    device 是要挂在的设备
+    dir 是挂载点，事先已经存在，建议使用空目录
+* umount device 卸载挂载
+* fdisk -l 显示硬盘的详细信息
+* sudo su 使用当前用户密码启用root用户权限
+* $PS1的变量,可以通过 echo $PS1查看你当前的变量值	
+	"root":表示当前的登录的用户
+	"@":可以理解为是一个分隔符号
+	"linux":应该是你的主机名
+	"~":表示你当前所在的目录
+	"#":表示你当前登录用户的身份是root超级用户
+* dpkg -l 查看所有安装软件
+* dpkg -l | grep "sogoupinyin" 查看软件的版本
+* whereis "sogoupinyin" 查看软件的安装路径
+* apt-cache search opencv 可以查找关于opencv的软件例如可以查找到libopencv-dev
+* sudo apt-get --purge remove <programname> 删除某个安装软件。
+* uname -a 查看Linux内核版本
+
