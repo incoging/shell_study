@@ -16,4 +16,14 @@
 * apt-cache search opencv 可以查找关于opencv的软件例如可以查找到libopencv-dev
 * sudo apt-get --purge remove <programname> 删除某个安装软件。
 * uname -a 查看Linux内核版本
+* apt-get缓存目录/var/cache/apt/archives
+* apt-get默认安装路径: 
+	软件一般在/usr/share
+	可执行文件/usr/bin
+	配置文件/etc
+	lib文件/usr/lib
+* gnome-screenshot [-option]
+	-a 抓取屏幕的一块区域
+	-w 抓取一个窗口
+	-B 去除屏幕截图的窗口边框
 
