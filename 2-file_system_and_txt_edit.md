@@ -1,12 +1,12 @@
-#Linux文件系统和文本编辑器
-##2.1 用户和用户组管理
+###Linux文件系统和文本编辑器
+####2.1 用户和用户组管理
 三类用户：
 ```
 1.root用户：唯一，真实，可以登录系统，拥有最高权限
 2.虚拟用户：伪用户，不能登录系统，系统自身拥有，eg:bin, daemon, adm, ftp, mail.
 3.普通真实用户：能登录系统，只能操作根目录内容，部分权限，系统管理员自行添加。
 ```
-###常用命令：
+#####常用命令：
 1.useradd  -- 用户账号添加
 ```
 useradd [option] [username]
@@ -47,7 +47,7 @@ passwd [option] [username]
 * eg: sudo passwd username
 
 
-###2.1.2 用户组管理命令
+#### 2.1.2 用户组管理命令
 1.groupadd -- 用户组添加
 ```
 groupadd [option] [groupname]          [groupname]是将要创建的用户组名
@@ -58,7 +58,7 @@ groupadd [option] [groupname]          [groupname]是将要创建的用户组名
 
 >eg: sudo groupadd -g 666 wangyq      添加了一个GID为666的用户组wangyq
 tail -l /etc/group  进行查看
-
+ 
 2.groupmod -- 用户组修改
 ```
 groupmod [option] [groupname]
@@ -68,8 +68,8 @@ groupmod [option] [groupname]
 ```
 groupdel [groupname]
 ```
-##文件和文件目录
-###2.2.1文件操作常用命令
+### 文件和文件目录
+#### 2.2.1文件操作常用命令
 1.ls -- 文件清单命令   
 ```
 ls [option] [directory]
@@ -101,7 +101,7 @@ rm [option] [filename or directoryName]
 -r 指示rm将目录中的全部文件及子目录全部删除   
 -i 进行交互式删除
 
-###2.2.2目录操作命令
+#### 2.2.2目录操作命令
 1.mkdir -- 创建目录命令。
 ```
 mkdir [option] [directoryName]
@@ -128,7 +128,7 @@ cd [directoryName]
 cd 返回登录目录   
 cd ~ 返回登录目录
 
-###2.2.3 文件和目录权限管理
+#### 2.2.3 文件和目录权限管理
 ```
 drwxr-xr-x. 1 root root 225 03-15 13:14 abc.txt
 ```
@@ -155,8 +155,9 @@ a 表示所有用户
 >eg: chmod u+x, g+w test1 等价于 chmod 764 test1  (因为可执行就伴随着可读可写，可写就伴随着可读)
 
 
-##2.3文本编辑器
-###2.3.1 vim编辑器
+### 2.3文本编辑器
+#### 2.3.1 vim编辑器
+
 1.vim基本操作
 ```
 vim [option] [filename...]
@@ -176,7 +177,7 @@ vim [option] [filename...]
 q  --离开vim文本编辑器   
 q！  --修改过文本，但是不想保存修改，强制退出   
 wq -- 存储并离开vim编辑器   
-> * 一般模式下其他命令：   
+> 一般模式下其他命令：     
 h, j, k, l  将光标向左，下，上，右移动。   
 { ---将光标移动到段落开头   
 } -- 将光标移动到段落末尾   

@@ -1,5 +1,5 @@
-###玖 变量的高级用法
-####9.1 内部变量
+#### 玖 变量的高级用法
+##### 9.1 内部变量
 1.BASH
 >BASH记录了bash Shell的路径，通常为/bin/bash，内部变量SHELL就是通过BASH的值确定当前Shell的类型。
 
@@ -192,7 +192,7 @@ ${string//substring/replacement}  # 替换所有与substring相匹配的子串
 ${string/#substring/replacement}  # 替换string开头处与substring相匹配的子串
 ${string/%substring/replacement}  # 替换string结尾处与substring相匹配的子串
 ```
-####9.3 有类型变量
+#### 9.3 有类型变量
 declare和typeset是等价的命令来指定变量类型。
 ```bash
 declare [选项] 变量名
@@ -209,7 +209,7 @@ declare [选项] 变量名
 ```bash
 result=$((var1*var2))
 ```
-#####9.5.2 bc运算器
+##### 9.5.2 bc运算器
 ```bash
 bc  # 启动bc运算器
 quit  # 退出bc运算器

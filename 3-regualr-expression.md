@@ -1,7 +1,7 @@
-##3.4 grep命令
+### 3.4 grep命令
 > grep是Global search Regular Expression and Print out the line 的简称，即全面搜索正则表达式
 
-###3.4.1 grep基本用法
+#### 3.4.1 grep基本用法
 ```
 grep [选项] [模式] [文件...]
 ```
