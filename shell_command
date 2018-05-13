@@ -96,3 +96,4 @@
 * init 0 关机
 * init 6 重启
 * ifconfig 网卡名 IP地址  将对应的网卡修改为对应的ip地址。
+* watch -n 2 nvidia-smi 每经过2秒显示一下GUP运行情况
