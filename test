@@ -59,3 +59,35 @@ if res:
     print("true")
 else:
     print("false")
+
+
+
+def find():
+    m, n = map(int, input().strip().split())
+    array = []
+    for i in range(m):
+        temp = list(map(int, input().strip().split()))
+        array.append(temp)
+    target = int(input().strip())
+    
+    if not array:
+        return
+    row=len(array)
+    col=len(array[0])
+    for i in range(row):
+        for j in range(col):
+            if array[i][j]==target:
+                return True
+    return False
+
+res = find()
+if res:
+    print("true")
+else:
+    print("false")
+
+
+
+
+
+
