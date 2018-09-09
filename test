@@ -28,3 +28,34 @@ if res:
     print("true")
 else:
     print("false")
+
+
+
+
+
+def find():
+    m, n = map(int, input().strip().split())
+    array = []
+    for i in range(m):
+        temp = list(map(int, input().strip().split()))
+        array.append(temp)
+    target = int(input().strip())
+
+    rows = len(array) - 1
+    cols= len(array[0]) - 1
+    i = rows
+    j = 0
+    while j<=cols and i>=0:
+        if target<array[i][j]:
+            i -= 1
+        elif target>array[i][j]:
+            j += 1
+        else:
+            return True
+    return False
+
+res = find()
+if res:
+    print("true")
+else:
+    print("false")
