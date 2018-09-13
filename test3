@@ -1,32 +1,18 @@
-string_input = input().strip()
+pre = list(map(int, input().strip().split()))
+middle = list(map(int, input().strip().split()))
 
-def restore(string, temp, res, count, i, length):
-    if i ==length and count == 0:
-        res.append(temp)
-        return res
-    if (count== 0 and i < length) or (count > 0 and i == length):
-        return res
-    mask = True
-    num = 0
-    while i < length and mask:
-        if num == 0 and string[i] == "0":
-            mask = False
-        num = num * 10 + ord(string[i]) - ord('0')
+
+res = []
+def post(root, start, end):
+    if start>end:
+        return 
+    i = start
+    while i < end and middle[i] != pre[root]:
         i += 1
-        if num < 256:
-            record = ""
-            if num == 1:
-                record = temp + str(num)
-            else:
-                record = temp + str(num) + "."
-            restore(string, record, res, count-1, i, length)
-    return res
-
-def compute(string_):
-    result = []
-    temp = ""
-    the_length = len(string_)
-    result = restore(string_, temp, result,4, 0,  the_length)
-    print(len(result))
-
-compute(string_input)
+    post(root+1, start, i-1)
+    post(root+1+i-start, i+1, end)
+    res.append(middle[i])
+    
+post(0, 0, len(pre)-1)
+result = "".join(res)
+print(result)
