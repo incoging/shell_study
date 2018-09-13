@@ -7,3 +7,22 @@ for i in range(the_num):
         hash_map[j] += 1
 max_value = max(hash_map)
 print(max_value)
+
+
+the_num = int(input().strip())
+
+hash_map = dict()
+# s = set()
+for i in range(the_num):
+    x, y = map(int, input().strip().split())
+    for j in range(x, y)[::-1]:
+        has_key = hash_map.get(j, 0)
+        if not has_key:
+            hash_map[j] = 1
+        else:
+            hash_map[j] += 1
+max_value = 0
+for key in hash_map:
+    if hash_map.get(key) > max_value:
+        max_value = hash_map.get(key)
+print(max_value)
