@@ -1,20 +1,22 @@
-n = int(input().strip())
 
+def findSubstring(s, k):
 
-schs = list()
-for _ in range(0, n, 2):
-    tmp1, tmp2 = [float(input().strip()) for _ in range(2)]
-    schs.append((tmp1, tmp2))
+    my_map = {}
+    for i in range(len(s) - k + 1):
+        temp = my_map.get(s[i : i + k], 0)
+        my_map[s[i : i + k]] = temp + 1
+    return my_map
 
-schs.sort(key=lambda x: x[1])
-right = -1
-ans = 0
+k = int(input().strip())
+A = input().strip()
+B = input().strip()
 
+A_map = findSubstring(A, k)
+B_map = findSubstring(B, k)
 
-for p in schs:
-    if p[0] <= right:
-        ans += 1
-    else:
-        right = p[1]
+count = 0
+for item in A_map.items():
+    if item[0] in B_map.keys():
+        count += B_map[item[0]]
 
-print(ans)
+print(count)
