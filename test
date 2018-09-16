@@ -20,3 +20,41 @@ for item in A_map.items():
         count += B_map[item[0]]
 
 print(count)
+
+
+
+import math
+
+Q, P = list(map(int, input().strip().split()))
+N = math.floor(math.sqrt(2 * (Q + P)))
+
+
+def func(Q, P, N):
+    if N * (N + 1) != (Q + P) * 2:
+        return -1
+    if Q <= N:
+        return 1
+    res = 0
+    q = Q
+    n = N
+    while (q >= n) and (n > 0):
+        q -= n
+        n -= 1
+        res += 1
+    if q != 0:
+        res += 1
+
+    return res
+
+
+print(func(Q, P, N))
+
+
+
+
+
+
+
+
+
+
